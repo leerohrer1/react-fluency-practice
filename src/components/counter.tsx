@@ -4,6 +4,7 @@
 "use client";
 
 import { useState } from "react";
+import CounterHeader from "./counter-header";
 
 export default function Counter() {
   const [count, setCount] = useState(0);
@@ -14,18 +15,19 @@ export default function Counter() {
 
   return (
     <>
+      <CounterHeader count={count} />
       <h2>Counter</h2>
       <button onClick={handleClick}>Click count: {count}</button>
     </>
   );
 }
 
-// // exercise solution given 
+// // exercise solution given
 //  import React, { useState } from 'react';
-    
+
 //     function Counter() {
 //       const [count, setCount] = useState(0);
-    
+
 //       return (
 //         <div>
 //           <p>You clicked {count} times</p>
@@ -35,6 +37,5 @@ export default function Counter() {
 //         </div>
 //       );
 //     }
-    
+
 //     export default Counter;
-     
