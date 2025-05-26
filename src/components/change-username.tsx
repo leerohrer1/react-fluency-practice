@@ -21,19 +21,17 @@ export default function UserComponent() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setUsername(inputValue);
+    setInputValue("");
   };
 
   return (
     <>
       <h2>Welcome, {username}!</h2>
+      <p>Update username:</p>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          onChange={handleChange}
-          placeholder={`Username: ${username}`}
-        />
+        <input type="text" value={inputValue} onChange={handleChange} />
         <br />
-        <button type="submit">Update Username</button>
+        <button type="submit">Update</button>
       </form>
     </>
   );
